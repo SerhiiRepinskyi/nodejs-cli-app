@@ -1,3 +1,4 @@
+const { Command } = require("commander");
 const {
   listContacts,
   getContactById,
@@ -5,6 +6,18 @@ const {
   updateContactById,
   removeContact,
 } = require("./contacts.js");
+
+const program = new Command();
+program
+  .option("-a, --action <type>", "choose action")
+  .option("-i, --id <type>", "user id")
+  .option("-n, --name <type>", "user name")
+  .option("-e, --email <type>", "user email")
+  .option("-p, --phone <type>", "user phone");
+
+program.parse(process.argv);
+
+const argv = program.opts();
 
 const invokeAction = async ({ action, id, name, email, phone }) => {
   switch (action) {
@@ -37,7 +50,9 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
   }
 };
 
-invokeAction({ action: "list" });
+invokeAction(argv);
+
+// invokeAction({ action: "list" });
 
 // invokeAction({ action: "get", id: "AeHIrLTr6JkxGE6SN-0Rw" });
 
