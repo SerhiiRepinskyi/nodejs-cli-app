@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-hw-01-phonebook",
+  "name": "nodejs-cli-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,19 +7,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index",
-    "start:dev": "nodemon index"
+    "dev": "nodemon index"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SerhiiRepinskyi/nodejs-hw-01-phonebook.git"
+    "url": "git+https://github.com/SerhiiRepinskyi/nodejs-cli-app.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SerhiiRepinskyi/nodejs-hw-01-phonebook/issues"
+    "url": "https://github.com/SerhiiRepinskyi/nodejs-cli-app/issues"
   },
-  "homepage": "https://github.com/SerhiiRepinskyi/nodejs-hw-01-phonebook#readme",
+  "homepage": "https://github.com/SerhiiRepinskyi/nodejs-cli-app#readme",
   "devDependencies": {
     "nodemon": "^2.0.22"
   },
